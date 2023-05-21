@@ -7,7 +7,7 @@ from fastapi.encoders import jsonable_encoder
 #App Object
 app = FastAPI()
 
-origins = ['http://localhost:3000', 'https://frontend-stockstat-33yyspgzpa-as.a.run.app']
+origins = ['http://localhost:3000', 'https://frontend-stockstat-33yyspgzpa-as.a.run.app', 'https://stockstat.in']
 
 app.add_middleware(
     CORSMiddleware,
