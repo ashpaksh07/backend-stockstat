@@ -1,9 +1,7 @@
-FROM python:3.10
+FROM python:3.10-slim
 
-RUN pip install fastapi uvicorn
-
-EXPOSE 8000
+WORKDIR /app
 
 COPY . /app
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+RUN pip install -r requirements.txt
