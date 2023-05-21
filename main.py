@@ -7,7 +7,7 @@ from fastapi.encoders import jsonable_encoder
 #App Object
 app = FastAPI()
 
-origins = ['http://localhost:3000']
+origins = ['http://localhost:3000', 'https://frontend-stockstat-33yyspgzpa-as.a.run.app']
 
 app.add_middleware(
     CORSMiddleware,
@@ -20,7 +20,7 @@ app.add_middleware(
 @app.get("/")
 def read_root():
     return{"stock":"stat"}
-
+ 
 # BaseModel class for defining the json structure of request
 class Item(BaseModel):
     particulars: str = None
